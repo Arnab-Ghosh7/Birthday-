@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #000000); /* Dark gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.timer-section {
+  text-align: center;
+  z-index: 2;
+}
+
+#countdown {
+  font-size: 8rem;
+  color: #ff6f61;
+  font-weight: bold;
+  animation: zoom 1s infinite;
+}
+
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
+.birthday-section {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  width: 90%;
+  max-width: 400px;
+}
+
+.hidden {
+  display: none;
+}
+
+.photo-container {
+  margin-bottom: 20px;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #ff6f61;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.message h1 {
+  font-size: 2rem;
+  color: #ff6f61;
+  animation: slideIn 1s ease-out;
+}
+
+.message p {
+  font-size: 1rem;
+  color: #333;
+  animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.crackers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./fireworks-16776_256.gif') no-repeat center center; 
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.8;
+  
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
